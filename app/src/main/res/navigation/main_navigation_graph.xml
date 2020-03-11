@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_navigation_graph"
+    app:startDestination="@id/mainFragment">
+
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="com.avinnikov.nativeperformance.ui.MainFragment"
+        android:label="Main"
+        tools:layout="@layout/fragment_with_recycler">
+
+        <action
+            android:id="@+id/mainToRecyclerTests"
+            app:destination="@+id/recyclerTestsFragment" />
+
+        <action
+            android:id="@+id/mainToArrayTests"
+            app:destination="@+id/arrayTestsFragment" />
+
+        <action
+            android:id="@+id/mainToStringTests"
+            app:destination="@+id/stringTestsFragment" />
+
+        <action
+            android:id="@+id/mainToSubviewsTest"
+            app:destination="@+id/subviewsTestFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/recyclerTestsFragment"
+        android:name="com.avinnikov.nativeperformance.ui.RecyclerTestsFragment"
+        android:label="Recycler tests"
+        tools:layout="@layout/fragment_with_recycler">
+
+        <action
+            android:id="@+id/recyclerTestsToLongTextTest"
+            app:destination="@+id/longTextTestFragment" />
+
+        <action
+            android:id="@+id/recyclerTestsToShortTextTest"
+            app:destination="@+id/shortTextTestFragment" />
+
+        <action
+            android:id="@+id/recyclerTestsToImageTest"
+            app:destination="@+id/imageTestFragment" />
+
+        <action
+            android:id="@+id/recyclerTestsToImageAlphaTest"
+            app:destination="@+id/imageAlphaTestFragment" />
+
+        <action
+            android:id="@+id/recyclerTestsToDynamicTextTest"
+            app:destination="@+id/dynamicTextTestFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/arrayTestsFragment"
+        android:name="com.avinnikov.nativeperformance.ui.ArrayTestsFragment"
+        android:label="Array tests"
+        tools:layout="@layout/fragment_with_recycler">
+
+        <action
+            android:id="@+id/arrayTestsToSystemSortingTest"
+            app:destination="@+id/systemSortingTestFragment" />
+
+        <action
+            android:id="@+id/arrayTestsToManualSortingTest"
+            app:destination="@+id/manualSortingTestFragment" />
+
+        <action
+            android:id="@+id/arrayTestsToMappingTest"
+            app:destination="@+id/mappingTestFragment" />
+
+        <action
+            android:id="@+id/arrayTestsToFilteringTest"
+            app:destination="@+id/filteringTestFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/stringTestsFragment"
+        android:name="com.avinnikov.nativeperformance.ui.StringTestsFragment"
+        android:label="String tests"
+        tools:layout="@layout/fragment_with_recycler">
+
+        <action
+            android:id="@+id/stringTestsToConcatenationTest"
+            app:destination="@+id/concatenationTestFragment" />
+
+        <action
+            android:id="@+id/stringTestsToComponentsTest"
+            app:destination="@+id/componentsTestFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/subviewsTestFragment"
+        android:name="com.avinnikov.nativeperformance.ui.SubviewsTestFragment"
+        android:label="Subviews test"
+        tools:layout="@layout/fragment_subview" />
+
+    <fragment
+        android:id="@+id/longTextTestFragment"
+        android:name="com.avinnikov.nativeperformance.ui.LongTextTestFragment"
+        android:label="Long text test"
+        tools:layout="@layout/fragment_with_recycler" />
+
+    <fragment
+        android:id="@+id/shortTextTestFragment"
+        android:name="com.avinnikov.nativeperformance.ui.ShortTextTestFragment"
+        android:label="Short text test"
+        tools:layout="@layout/fragment_with_recycler" />
+
+    <fragment
+        android:id="@+id/imageTestFragment"
+        android:name="com.avinnikov.nativeperformance.ui.ImageTestFragment"
+        android:label="Image without alpha test"
+        tools:layout="@layout/fragment_with_recycler" />
+
+    <fragment
+        android:id="@+id/imageAlphaTestFragment"
+        android:name="com.avinnikov.nativeperformance.ui.ImageAlphaTestFragment"
+        android:label="Image with alpha test"
+        tools:layout="@layout/fragment_with_recycler" />
+
+    <fragment
+        android:id="@+id/dynamicTextTestFragment"
+        android:name="com.avinnikov.nativeperformance.ui.DynamicTextTestFragment"
+        android:label="Dynamic text test"
+        tools:layout="@layout/fragment_with_recycler" />
+
+    <fragment
+        android:id="@+id/systemSortingTestFragment"
+        android:name="com.avinnikov.nativeperformance.ui.SystemSortingTestFragment"
+        android:label="System sorting test"
+        tools:layout="@layout/fragment_with_text" />
+
+    <fragment
+        android:id="@+id/manualSortingTestFragment"
+        android:name="com.avinnikov.nativeperformance.ui.ManualSortingTestFragment"
+        android:label="Manual sorting test"
+        tools:layout="@layout/fragment_with_text" />
+
+    <fragment
+        android:id="@+id/mappingTestFragment"
+        android:name="com.avinnikov.nativeperformance.ui.MappingTestFragment"
+        android:label="Mapping test"
+        tools:layout="@layout/fragment_with_text" />
+
+    <fragment
+        android:id="@+id/filteringTestFragment"
+        android:name="com.avinnikov.nativeperformance.ui.FilteringTestFragment"
+        android:label="Filtering test"
+        tools:layout="@layout/fragment_with_text" />
+
+    <fragment
+        android:id="@+id/concatenationTestFragment"
+        android:name="com.avinnikov.nativeperformance.ui.ConcatenationTestFragment"
+        android:label="Concatenation test"
+        tools:layout="@layout/fragment_with_text" />
+
+    <fragment
+        android:id="@+id/componentsTestFragment"
+        android:name="com.avinnikov.nativeperformance.ui.ComponentsTestFragment"
+        android:label="Components test"
+        tools:layout="@layout/fragment_with_text" />
+
+</navigation>
